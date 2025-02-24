@@ -46,7 +46,7 @@
     </div>
 
     <!-- JavaScript Code -->
-    <script>
+   <script>
     function displayCurrentDate() {
         const date = new Date();
         const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -59,7 +59,7 @@
             cityInput.value = city; // Set input field to default city
         }
 
-        fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=1`)
+        fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=1&language=en`)
             .then(response => response.json())
             .then(data => {
                 if (!data.results || data.results.length === 0) {
